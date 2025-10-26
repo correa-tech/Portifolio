@@ -3,9 +3,9 @@ import {  Navbar,   NavbarBrand,   NavbarContent,   NavbarItem,   NavbarMenuTogg
 
 export default function Header() {
   return (
-    <Navbar className="w-full flex items-center justify-between  fixed top-0 left-0 px-8 py-4 bg-black/10 backdrop-blur-20 z-30">
+    <Navbar className="w-full flex items-center justify-between fixed top-0 left-0 px-8 py-4 bg-black/10 backdrop-blur-20 z-30">
       <NavbarBrand className="flex items-center gap-2">
-        <p className="font-bold text-white text-lg">Portifólio</p>
+        <p className="font-bold text-white text-lg">Portfólio</p>
       </NavbarBrand>
 
       <NavbarContent className="hidden sm:flex gap-10">

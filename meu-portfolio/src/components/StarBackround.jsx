@@ -9,7 +9,11 @@ export default function StarBackground() {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
     }).then(() => {
-      setInit(true);
+      function setTime (){
+        setInit(true);
+      }setTimeout(setTime, 4000)
+
+
     });
   }, []);
 
@@ -20,8 +24,8 @@ export default function StarBackground() {
       },
       particles: {
         number: { value: 250 },
-        color: { value: "#2C3AED" },
-        size: { value: 1.2 },
+        color: { value: "#FFFFFF" },
+        size: { value: 0.05 },
         move: { enable: true, speed: 0.1 },
         opacity: { value: 0.8 },
       },
