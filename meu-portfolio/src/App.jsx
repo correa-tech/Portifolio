@@ -1,10 +1,10 @@
 
 import "./App.css"
 import Particless from "./components/particules";
-import fotoPerfil from './assets/perfil.jpg'
 import { Canvas } from "@react-three/fiber";
 import Header from "./components/Header";
 import { useEffect, useState } from "react";
+import SobreMimSection from "./components/SectionAbout";
 import StarBackground from "./components/StarBackround";
 
 function App() {
@@ -22,9 +22,9 @@ useEffect(() => {
 
 
   return (
-  <main className="w-screen text-white bg-app overflow-x-hidden">
+  <main className="w-full text-white bg-app overflow-x-hidden">
 
-    <section className="relative h-screen overflow-hidden">
+    <section className="relative h-screen overflow-hidden w-full">
     <Canvas className="w-full h-screen" camera={{ position: [0, 0, 10], fov: 60 }}>
       <ambientLight intensity={0.5} />
       <Particless count={2000} exploded={exploded} setExploded={setExploded} />
@@ -44,30 +44,12 @@ useEffect(() => {
     </div>
     </section>
 
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-app to-black px-8">
+    {exploded && (
+      <div>
+        <SobreMimSection/>
         <StarBackground/>
-
-        <div className="max-w-2x1 w-full grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-          <div className="flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden shadow-2xl border-4 border-white/20">
-              <img src={fotoPerfil} alt="Foto de perfil" className="object-cover w-full h-full" />
-            </div>
-          </div>
-
-          <div className="text-center md:text-left space-y-6">
-            <h2 className="text-6xl font-bold  opacity-80 ">
-              Sobre mim
-            </h2>
-            <p className="text-lg leading-relaxed opacity-90">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur veniam beatae impedit magni repellat doloremque ipsa quae illo expedita eligendi quam in adipisci animi accusantium, vitae assumenda sint totam recusandae!</p>
-            <p className="text-lg leading-relaxed opacity-80">
-               Quando não estou codando, costumo estudar novas tecnologias, tocar
-              violão e criar projetos pessoais que me desafiam a aprender algo novo.
-             </p>
-          </div>
-        </div>
-
-    </section>
-
+      </div>
+    )}
   </main>
   );
 }
