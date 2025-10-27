@@ -12,7 +12,7 @@ export default function TechStack() {
 ];
 
   return (
-    <section className="min-h-[50vh] ">
+    <section className="min-h-[30vh] ">
       <h2 className="text-4xl text-center font-bold mb-8">Tecnologias</h2>
       <div className="flex flex-row gap-8">
         {techs.map((tech, index) => (

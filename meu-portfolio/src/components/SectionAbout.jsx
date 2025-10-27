@@ -37,7 +37,7 @@ function SobreMimSection() {
           </div>
 
           <div className="absolute w-full max-w-[1px] grid grid-cols-3 sm:grid-cols-4 gap-6 justify-items-center 
-                  opacity-0 translate-y-20 group-hover:opacity-100 group-hover:translate-y-50   
+                  opacity-0 translate-y-10 group-hover:opacity-100 group-hover:translate-y-30   
                   transition-all duration-1000 ease-out">
             <TechStack />
           </div>

@@ -46,8 +46,8 @@ useEffect(() => {
 
     {exploded && (
       <div>
-        <SobreMimSection/>
         <StarBackground/>
+        <SobreMimSection/>
       </div>
     )}
   </main>
